@@ -1,2 +1,2 @@
-# tonics-nginx
+# Tonics Nginx
 Nginx official image for TonicsCloud
