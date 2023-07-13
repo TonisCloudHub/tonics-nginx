@@ -29,7 +29,7 @@ mkdir images && lxc stop tonics-nginx && lxc publish tonics-nginx --alias tonics
 
 # Export Image
 lxc start tonics-nginx
-lxc image export tonics-nginx images/nginx-$NginxVersion
+lxc image export tonics-nginx images/nginx-bookworm-$NginxVersion
 
 # Image Info
 lxc image info tonics-nginx >> images/info.txt && ls -la images
