@@ -1,7 +1,8 @@
 name: LXD Nginx Image Build
 on:
   push:
-    branches: [main]
+    paths:
+    - '.github/workflows/bookworm-main.yml'
   schedule:
   - cron: '0 0 * * *' # Once EveryDay
 
