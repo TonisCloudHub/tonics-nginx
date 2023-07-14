@@ -19,7 +19,7 @@ lxc exec tonics-nginx -- bash -c "apt-get update -y && apt install -y nginx"
 lxc exec tonics-nginx -- bash -c "sudo nginx"
 
 # Clean Debian Cache
-lxc exec tonics-nginx -- apt clean
+lxc exec tonics-nginx -- bash -c "apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*"
 
 # Nginx Version
 NginxVersion=$(lxc exec tonics-nginx -- nginx -v |& sed 's/nginx version: nginx\///')
